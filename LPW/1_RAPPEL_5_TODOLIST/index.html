@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos</title>
+    <link rel="stylesheet" href="todolist.css">
+</head>
+<body>
+  <div class="container">
+      <form id="task-form">
+          <input type="text" name="new-task" id="new-task" value="">
+          <button type="submit">add</button>
+      </form>
+
+      <h2>Todo</h2>
+      <ul id="todo"></ul>
+
+      <h2>Done</h2>
+      <ul id="done"></ul>
+  </div>
+    <div id="edit-modal">
+        <form id="edit-form">
+            <input type="text" id="edit-input" name="edit-input">
+            <button type="submit">alter</button>
+        </form>
+    </div>
+
+    <script src="todolist.js"></script>
+</body>
+</html>

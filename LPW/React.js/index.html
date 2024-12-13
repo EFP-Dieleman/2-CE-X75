@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      pre{background:gray; color:white;}
+      ol li{font-weight:bold; font-size:1.2em;}
+      ul{margin-left:2em}
+    </style>
+  </head>
+  <body>
+    <h1>React.js</h1>
+    <div class="markdown prose w-full break-words dark:prose-invert light">
+        <ol start="1">
+          <li>Introduction</li>
+        </ol>
+        <ul>
+            <li>What is React.js ?</li>
+            <li>Technologies & techniques</li>
+        </ul>
+        <ol start="2">
+          <li>Components and Props:</li>
+        </ol>
+        <ul>
+            <li>Understanding the concept of components in React and how they interact with props.</li>
+            <li>Building a simple component and rendering it on a web page.</li>
+        </ul>
+        <ol start="3">
+            <li>State and Lifecycle:</li>
+        </ol>
+        <ul>
+            <li>Understanding the concept of state in React and how it differs from props.</li>
+            <li>Working with the lifecycle methods of a React component.</li>
+        </ul>
+        <ol start="4">
+            <li>Handling Events:</li>
+        </ol>
+        <ul>
+            <li>Understanding how events work in React and how to handle them.</li>
+            <li>Building interactive components by handling events such as clicks and form submissions.</li>
+        </ul>
+        <ol start="5">
+            <li>Conditional Rendering and Lists:</li>
+        </ol>
+        <ul>
+            <li>Understanding how to use conditionals to render different content in a component.</li>
+            <li>Learning how to render lists of data in a component.</li>
+        </ul>
+        <ol start="6">
+            <li>Form and Controlled Components:</li>
+        </ol>
+        <ul>
+            <li>Understanding how to build and handle forms in React.</li>
+            <li>Creating controlled components and working with form input and validation.</li>
+        </ul>
+        <ol start="7">
+            <li>Introducing Hooks:</li>
+        </ol>
+        <ul>
+            <li>Introduction to React Hooks, a way to use state and other React features without writing a class.</li>
+            <li>Learn how to use common hooks such as useState, useEffect and useContext.</li>
+        </ul>
+        <ol start="8">
+            <li>Advanced Features:</li>
+        </ol>
+        <ul>
+            <li>Routing: Learn how to use React Router to handle client-side routing.</li>
+            <li>Context: Learn how to use React's context API to share state across components.</li>
+            <li>Server-side rendering: Learn how to render a React application on the server for improved performance and SEO.</li>
+        </ul>
+        <ol start="9">
+            <li>Building a Real-world Application</li>
+        </ol>
+        <ul>
+            <li>Build a real-world application from scratch, with the use of the features covered in the course.</li>
+        </ul>
+        <ol start="10">
+            <li>Deployment and Future steps</li>
+        </ol>
+        <ul>
+            <li>Learn how to deploy your application to different platforms, troubleshoot and Best practices and next steps for building more complex and scalable applications with React.</li>
+        </ul>
+        <p>Please note that this is a high-level plan, and you can add or change as per your need, but this should give you a good starting point for creating your own React course.</p>
+    </div>
+
+    <h1>Introduction</h1>
+    <div class="markdown prose w-full break-words dark:prose-invert light">
+        <p>React.js is an open-source JavaScript library for building user interfaces or UI components. It was developed and is maintained by Facebook, and it's mainly used for building web applications with complex and interactive user interfaces. React allows developers to build reusable UI components and manage the state of a website or application in a way that is efficient and easy to understand.</p>
+        <p>React also encourages a component-based architecture, where the application is broken down into small, reusable pieces that can be easily composed to create complex UI.</p>
+        <p>It supports a wide variety of use cases, from simple one-page apps, to complex web and mobile applications, and it can be used in conjunction with other JavaScript libraries or frameworks such as Angular and Vue.</p>
+        <p>React is also not limited to web-based application, it can be used in building native mobile app with React Native and Electron apps as well.</p>
+    </div>
+
+    <h2>Technologies & techniques</h2>
+    <h3>JSX</h3>
+    <div class="markdown prose w-full break-words dark:prose-invert light">
+        <p>JSX is a syntax extension for JavaScript that allows you to write HTML-like elements in your JavaScript code. It was created specifically for use with React, but can be used with other libraries and frameworks as well.</p>
+        <p>In JSX, you can write HTML-like elements, known as JSX elements, inside JavaScript code. These elements look similar to HTML elements, but are actually JavaScript objects that represent a virtual DOM node. When a JSX element is rendered, React converts it into a real DOM node that can be displayed in the browser.</p>
+        <p>For example, here's a JSX element that creates a div containing some text:</p>
+        <pre><div class="bg-black mb-4 rounded-md"><div class="p-4 overflow-y-auto"><code class="!whitespace-pre-wrap hljs language-javascript"><span class="hljs-keyword">const</span> element = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Hello, world!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>;
+    </code></div></div></pre>
+        <p>It's transpiled to</p><pre><div class="bg-black mb-4 rounded-md"><div class="p-4 overflow-y-auto"><code class="!whitespace-pre-wrap hljs language-javascript"><span class="hljs-keyword">const</span> element = <span class="hljs-title class_">React</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">"div"</span>, <span class="hljs-literal">null</span>, <span class="hljs-string">"Hello, world!"</span>);
+    </code></div></div></pre>
+        <p>JSX has some other important features as well, such as being able to include JavaScript expressions inside JSX elements.</p><pre><div class="bg-black mb-4 rounded-md"><div class="p-4 overflow-y-auto"><code class="!whitespace-pre-wrap hljs language-javascript"><span class="hljs-keyword">const</span> name = <span class="hljs-string">"John"</span>;
+    <span class="hljs-keyword">const</span> element = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Hello, {name}<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span></span>;
+    </code></div></div></pre>
+        <p>JSX allows you to easily build complex and dynamic user interfaces with minimal code, making it an essential tool for building applications with React.</p>
+        <p>It's important to note that you will need a JSX compiler, such as Babel, to transpile your JSX code into regular JavaScript that can be run by the browser.</p>
+    </div>
+
+    <h3>Virtual DOM</h3>
+    <div class="markdown prose w-full break-words dark:prose-invert light">
+      <p>The virtual DOM (Document Object Model) is a programming concept that is used in React to improve the performance of web applications. The virtual DOM is a lightweight, in-memory representation of the actual DOM, and it is used to track changes in the state of a React application.</p>
+      <p>When the state of a component changes, React updates the virtual DOM first, and then it calculates the minimal set of changes that need to be made to the actual DOM. This allows React to make the most efficient updates to the user interface, by minimizing the amount of work that needs to be done by the browser.</p>
+      <p>The basic process of updating the DOM in react with virtual DOM is as follow:</p>
+      <ul>
+          <li>React creates a virtual representation of the actual DOM</li>
+          <li>When the component's state changes, React updates the virtual DOM</li>
+          <li>React then calculates the difference between the virtual DOM and the actual DOM</li>
+          <li>Finally, React updates the actual DOM with the minimal set of changes required to reflect the new state</li>
+      </ul>
+      <p>This approach allows React to minimize the amount of time the browser spends recalculating layout, repainting, and other expensive operations. This makes your application feel more responsive and faster.</p>
+      <p>The virtual DOM also allows React to implement an efficient and effective way of handling updates to the user interface, regardless of the size or complexity of the application. It makes it easy for developers to build and maintain complex, large-scale web applications without worrying about the performance implications of frequent updates to the user interface.</p>
+    </div>
+
+
+    <h3>Node.js</h3>
+    <div class="markdown prose w-full break-words dark:prose-invert light">
+        <p>Node.js is an open-source, cross-platform JavaScript runtime environment. It allows you to run JavaScript code on your computer, outside of a web browser. Node.js provides an easy way to execute JavaScript code on the server side, which means you can use JavaScript to build command-line tools, web servers, and other networked applications.</p>
+        <p>Node.js is built on the V8 JavaScript engine from Google Chrome, which provides a fast and efficient JavaScript runtime. Node.js also includes a built-in library called the Node.js runtime library, which provides a number of useful modules for performing common tasks such as reading and writing files, connecting to web servers, and working with databases.</p>
+        <p>Node.js has a large and active developer community, which means there are many third-party modules and packages available that you can use to add functionality to your Node.js applications. Some popular modules include Express.js (for building web servers), Mongoose (for working with MongoDB databases), and Socket.io (for real-time communication).</p>
+        <p>Node.js is often used in the back-end of web applications, providing the server-side logic and handling the communication between the front-end and the data storage. It is also used in building command-line tools, automation scripts, and other non-browser based applications like backend for IoT devices, Real-time applications and other use cases.</p>
+        <p>Because Node.js uses JavaScript as its programming language, it allows developers who are familiar with JavaScript to easily write server-side code, which can make it a popular choice for web and app development projects.</p>
+    </div>
+
+
+    <h3>NPM</h3>
+    <div class="markdown prose w-full break-words dark:prose-invert light">
+        <p>NPM stands for Node Package Manager, which is a package manager for the JavaScript programming language. It is the default package manager for Node.js and is used to install and manage packages (libraries, frameworks, tools, etc.) for use in Node.js projects.</p>
+        <p>NPM is included with Node.js, so when you download and install Node.js, you automatically get the NPM command-line tool. You can use the <code>npm</code> command to install packages, list installed packages, and manage other aspects of your Node.js project.</p>
+        <p>One of the main advantages of using NPM is that it makes it easy to share and reuse code. Developers can publish their own packages to NPM and make them available to the community, and other developers can easily install and use those packages in their own projects. This helps to promote code reuse and collaboration within the Node.js community.</p>
+        <p>When installing a package via NPM, the package and its dependencies will be installed in your project's <code>node_modules</code> directory. It also keeps track of all the packages and dependencies in your project in a <code>package.json</code> file, which makes it easy to manage and share your project's dependencies.</p>
+        <p>NPM also provides a command to easily update the packages and their dependencies. It is also a great tool for managing the versioning of your packages and dependencies, and it allows you to specify which version of a package you want to use.</p>
+        <p>In summary, NPM is a powerful tool that makes it easy to manage and share packages for Node.js projects, and it is an essential tool for any Node.js developer.</p>
+    </div>
+
+
+    <h2>Components and Props</h2>
+    <h3>Components</h3>
+
+    <div class="markdown prose w-full break-words dark:prose-invert light">
+        <p>In React, a component is a piece of code that represents a part of a user interface. Components are reusable and can be nested inside other components, allowing you to build complex user interfaces by composing simple building blocks.</p>
+        <p>A React component is defined as a JavaScript class or function, which returns a React element. The class-based component requires <code>extends React.Component</code> and must have a <code>render()</code> method, which returns the JSX element that will be rendered to the DOM,</p><pre><div class="bg-black mb-4 rounded-md"><div class="p-4 overflow-y-auto"><code class="!whitespace-pre-wrap hljs language-javascript"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyComponent</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">React.Component</span> {
+      <span class="hljs-title function_">render</span>(<span class="hljs-params"></span>) {
+        <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Hello, world!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>;
+          }
+        }
+        </code></div></div></pre>
+            <p>While functional component, just a plain JavaScript function that returns a JSX element.</p><pre><div class="bg-black mb-4 rounded-md"><div class="p-4 overflow-y-auto"><code class="!whitespace-pre-wrap hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">MyComponent</span>(<span class="hljs-params"></span>) {
+          <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Hello, world!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>;
+        }
+        </code></div></div></pre>
+            <p>Components can also have internal state, which is used to store data that can change and affect the component's behavior or appearance. The state is managed by React, and changes to the state will trigger an update to the component, causing it to re-render with the updated state.</p>
+            <p>Components can also receive input data in the form of props, which are passed to the component as attributes on the JSX element when the component is rendered. Props are used to customize the behavior or appearance of a component based on the context in which it is being used.</p>
+            <p>In summary, components are the building blocks of a React application, they allow developers to create reusable, modular code that can be easily composed to create complex user interfaces. Components can have internal state and receive input data through props, and React manages the updates to the component when the state or props change.</p>
+    </div>
+
+    <h3>Props</h3>
+    <div class="markdown prose w-full break-words dark:prose-invert light">
+        <p>In React, props (short for properties) are a way to pass data from a parent component to a child component. Props are used to customize the behavior or appearance of a child component based on the context in which it is being used.</p>
+          <p>When a component is rendered, you can pass in props as attributes on the JSX element, like this:</p><pre><div class="bg-black mb-4 rounded-md"><div class="p-4 overflow-y-auto"><code class="!whitespace-pre-wrap hljs language-php-template"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">MyComponent</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"John"</span> <span class="hljs-attr">age</span>=<span class="hljs-string">{30}</span> /&gt;</span>
+      </span></code></div></div></pre>
+          <p>The component can then access the props inside its <code>render()</code> method, or inside its other methods, by using <code>this.props</code> or <code>props</code> parameter depending on whether it's class or functional component.</p><pre><div class="bg-black mb-4 rounded-md"><div class="p-4 overflow-y-auto"><code class="!whitespace-pre-wrap hljs language-kotlin"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyComponent</span> <span class="hljs-title">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> {
+        render() {
+          <span class="hljs-keyword">return</span> &lt;div&gt;My name <span class="hljs-keyword">is</span> {<span class="hljs-keyword">this</span>.props.name} and I am {<span class="hljs-keyword">this</span>.props.age} years old.&lt;/div&gt;;
+        }
+      }
+      </code></div></div></pre><pre><div class="bg-black mb-4 rounded-md"><div class="p-4 overflow-y-auto"><code class="!whitespace-pre-wrap hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">MyComponent</span>(<span class="hljs-params">props</span>) {
+        <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>My name is {props.name} and I am {props.age} years old.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>;
+      }
+      </code></div></div></pre>
+          <p>Props are often used to configure a component with different settings, depending on where it is used in the application. For example, you might have a <code>&lt;Button&gt;</code> component that can be used in different parts of your application, with different text, colors, and other properties, based on the context in which it is used.</p>
+          <p>Props are also used to pass data from a parent component to a child component. The parent component can control the state of the child component by passing different props to it, and the child component can update its behavior or appearance based on the props it receives.</p>
+          <p>It's important to note that React props are immutable, meaning that once a component has received a prop, it cannot change its value internally, only parent component can change it by re-rendering it with different props.</p>
+          <p>In summary, props are a way to pass data from a parent component to a child component in React, and it is used to customize the behavior or appearance of a component, and to pass data from parent to child.</p>
+      </div>
+
+      <h2>State and Lifecycle</h2>
+      <h3>State</h3>
+      <div class="markdown prose w-full break-words dark:prose-invert light"><p>In React, "state" refers to the data or variables that determine a component's behavior and render information to the user. It is an object that holds values that can change over time, and it allows a component to keep track of information and update the view when necessary.</p><p>When a component's state changes, React will automatically call the <code>render()</code> method, which updates the component's view and causes the corresponding updates in the DOM.</p><p>To define and use state in a component, you can use the <code>state</code> property in the component's class. The <code>constructor</code> method is usually used to initialize state and set the initial values.</p><p>Here is an example of a simple component that has a state to keep track of a count:</p><pre><div class="bg-black mb-4 rounded-md"><div class="p-4 overflow-y-auto"><code class="!whitespace-pre-wrap hljs language-javascript"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyComponent</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">React.Component</span> {
+        <span class="hljs-title function_">constructor</span>(<span class="hljs-params">props</span>) {
+          <span class="hljs-variable language_">super</span>(props);
+          <span class="hljs-variable language_">this</span>.<span class="hljs-property">state</span> = {
+            <span class="hljs-attr">count</span>: <span class="hljs-number">0</span>
+          };
+        }
+        <span class="hljs-title function_">render</span>(<span class="hljs-params"></span>) {
+          <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>The count is: {this.state.count}<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>;
+        }
+      }
+      </code></div></div></pre><p>In the above example, <code>count</code> is the state variable, and it is initially set to 0. The component renders the count value by accessing the <code>count</code> property of the state object (<code>this.state.count</code>)</p><p>You can change the state of a component by calling the <code>setState()</code> method. This method will take an object that contains the new state values and merge it with the current state.</p><p>Here's an example of how to update the count in the previous example:</p><pre><div class="bg-black mb-4 rounded-md">
+        <div class="p-4 overflow-y-auto"><code class="!whitespace-pre-wrap hljs language-javascript"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyComponent</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">React.Component</span> {
+        <span class="hljs-title function_">constructor</span>(<span class="hljs-params">props</span>) {
+          <span class="hljs-variable language_">super</span>(props);
+          <span class="hljs-variable language_">this</span>.<span class="hljs-property">state</span> = {
+            <span class="hljs-attr">count</span>: <span class="hljs-number">0</span>
+          };
+        }
+
+        incrementCount = <span class="hljs-function">() =&gt;</span> {
+          <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">setState</span>({ <span class="hljs-attr">count</span>: <span class="hljs-variable language_">this</span>.<span class="hljs-property">state</span>.<span class="hljs-property">count</span> + <span class="hljs-number">1</span> });
+        };
+
+        <span class="hljs-title function_">render</span>(<span class="hljs-params"></span>) {
+          <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>The count is: {this.state.count}<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{this.incrementCount}</span>&gt;</span>Increment<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+          );
+        }
+      }
+      </code></div></div></pre><p>This component has a button that when clicked will increment the count state.</p><p>It's worth noting that state should be considered private to the component that owns it and should not be modified directly but through the setState method. And also, you should use state only when it's needed, and try to use props as much as possible, especially when the data is passed from a parent component.</p></div>
+      </body>
+</html>

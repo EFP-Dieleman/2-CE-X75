@@ -1,0 +1,9 @@
+prendre le damier de qqun d'autre
+
+1. lire le code du début à la fin
+2. commenter les endroits qui posent question/problème d'un point de vue algorithmique (micro)
+3. écrire dans le readme.md les considérations plus générales
+    - css & html
+    - structure générale du programme
+    - liste des todos
+4. les bugs vont dans des issues

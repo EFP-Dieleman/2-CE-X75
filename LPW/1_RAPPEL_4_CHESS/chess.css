@@ -1,0 +1,21 @@
+#board {
+    margin: 0 auto;
+    width: 640px;
+    height: 640px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    border:1em solid grey;
+}
+.cell{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+i{
+  font-style: normal;
+  color:#7A6666;
+  font-size:2em;
+}
+
+.black{background-color:black;}
+.white{background-color:white;}

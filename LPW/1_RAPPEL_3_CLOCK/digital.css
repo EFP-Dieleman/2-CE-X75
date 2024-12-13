@@ -1,0 +1,11 @@
+#container{
+  height:100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+a{color:black; text-decoration:none}
+
+#clock{
+  font-size:10em;
+}

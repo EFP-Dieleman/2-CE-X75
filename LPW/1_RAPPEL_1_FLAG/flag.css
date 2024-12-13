@@ -1,0 +1,83 @@
+body {
+    height:100vh;
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+.flags{
+  height:100%;
+  display:flex;
+
+  justify-content: space-around;
+  align-items: center;
+
+  row-gap:3.5em;
+  column-gap:3.5em;
+}
+
+.flag {
+  display: flex;
+  height: 50%;
+  min-height:300px;
+
+}
+
+.pole {
+  width: 0.5em;
+  background: silver;
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+}
+
+.stripes {
+  height: 8em;
+  width: 12em;
+  box-shadow: 0em 0em 2em silver;
+}
+
+.stripes.vertical{
+  display:flex;
+}
+
+.stripes.vertical div{
+  width: 33.33%;
+  height: 100%;
+
+}
+
+.stripes.horizontal div{
+  height: 33.33%;
+}
+
+.nld .start {
+	background-color: #A91F32;
+}
+.nld .middle {
+	background-color: #FFFFFF;
+}
+.nld .last {
+	background-color: #1E4785;
+}
+
+.lux .start {
+	background-color: #EF3340;
+}
+.lux .middle {
+	background-color: #FFFFFF;
+}
+.lux .last {
+	background-color: #00A3E0;
+}
+
+
+.bel .start {
+	background-color: #000000;
+}
+.bel .middle {
+	background-color: #FDDA24;
+}
+.bel .last {
+	background-color: #EF3340;
+}

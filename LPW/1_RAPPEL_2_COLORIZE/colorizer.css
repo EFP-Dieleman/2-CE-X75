@@ -1,0 +1,21 @@
+body{
+  padding:2em;
+}
+
+#colorized{
+  margin-top:2em;
+  font-size:2em;
+  text-align: center;
+}
+
+.color_1{
+  color:red;
+}
+
+.color_2{
+  color:green;
+}
+
+.color_3{
+  color:blue;
+}

@@ -1,0 +1,42 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    display:flex;
+    justify-content: center;
+}
+
+.container{
+  min-width:30em;
+  border:1px solid black;
+  padding:2em;
+  margin:2em;
+
+}
+
+ul{
+  border:1px solid red;
+  min-height:1em;
+}
+#edit-modal {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(1, 1, 1, 0.5);
+}
+
+#done .task-content{
+  text-decoration: line-through;
+}
+/* .checked {
+    text-decoration: line-through;
+} */
+ul{list-style-type: none; padding-left:0}
+li{clear:both;}
+li button{float:right;}
+input:checked + span {
+    text-decoration: line-through;
+}
